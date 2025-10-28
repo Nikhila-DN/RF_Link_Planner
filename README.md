@@ -1,5 +1,10 @@
 # RF Link Planner (React + Leaflet)
 
+### Links
+
+- Solution URL: [https://github.com/Nikhila-DN/RF_Link_Planner.git]
+- Live Site URL: https://rf-link-plannner-by-nikhila-d.netlify.app/
+
 ## Summary
 A simple frontend-only RF point-to-point link planner built with React and Leaflet. Users can place towers on the map, configure frequencies (GHz), connect towers with matching frequencies, and visualize a simplified first Fresnel zone as a 2D ellipse.
 
