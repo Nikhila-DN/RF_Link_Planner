@@ -1,0 +1,166 @@
+
+@import "leaflet/dist/leaflet.css";
+@import "tailwindcss";
+
+html,body,#root { 
+    height: 100%;
+    margin: 0; 
+    font-family: Inter, system-ui, sans-serif; 
+}
+
+.leaflet-container { 
+    height: 100vh; 
+    width: 100%; 
+}
+
+.app-container { 
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.sidebar { 
+    background: #0f172a; 
+    color: #e6eef8; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+    width: 320px;
+    border-left: 1px solid #ccc;
+    height: 100vh;             
+    overflow-y: auto;          
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 16px;
+    box-sizing: border-box;
+}
+  
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+}
+  
+  
+.brand { 
+    font-size: 18px; 
+    font-weight: 700; 
+}
+
+.controls { 
+    display:flex; 
+    gap:8px; 
+    align-items:center; 
+}
+
+.tower-list { 
+    padding:8px; 
+    border-radius:8px; 
+    background:#071025; 
+    flex:1; 
+}
+
+.tower-item { padding:8px; border-radius:6px; margin-bottom:6px; background:rgba(255,255,255,0.03); display:flex; justify-content:space-between; align-items:center }
+
+.btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: #1d4ed8;
+  }
+  
+  /* 🔴 Active "Showing" button state */
+  .btn.active {
+    background: #22c55e;            /* green for active */
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+    transform: scale(1.02);
+  }
+  
+  .btn.active:hover {
+    background: #16a34a;           /* darker green on hover */
+    box-shadow: 0 0 12px rgba(22, 163, 74, 0.6);
+  }
+  
+
+.btn.danger{ background: #ef4444 }
+
+.info { font-size:12px; color:#9fb0d6 }
+
+.map-wrap { 
+    position:relative;
+    flex: 1;
+    height: 100vh;
+    position: relative; 
+}
+
+.topbar { position:absolute; top:12px; left:12px; z-index:400; background:rgba(255,255,255,0.95); padding:8px 12px; border-radius:8px; box-shadow:0 6px 18px rgba(2,6,23,0.4); }
+
+
+
+/* ===========================
+   Responsive (mobile/tablet)
+=========================== */
+@media (max-width: 600px) {
+    .app-container {
+      flex-direction: column;     /* stack vertically */
+      height: auto;               /* allow page scroll */
+      width: 100%;
+    }
+  
+    .map-wrap {
+      order: 2;
+      height: 100vh;              
+      width: 100%;
+    }
+  
+    .sidebar {
+      order: 1;
+      width: 100%;
+      height: 100vh;              
+      border-left: none;
+      border-top: 1px solid #ccc;
+      overflow-y: auto;          
+      overflow-x: hidden;
+    }
+
+    .tower-item, .links-list{
+        padding: 5%;
+    }
+
+    .sidebar::-webkit-scrollbar {
+        width: 8px;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
+        background-color: #aaa;
+        border-radius: 4px;
+    }
+    .sidebar::-webkit-scrollbar-thumb:hover {
+        background-color: #777;
+    }
+}
+  
+ 
+  
+  
+  
+  
+
+
+
