@@ -1,8 +1,9 @@
 # RF Link Planner (React + Leaflet)
+Simplified RF Outdoor Link Planner Tool [RF (Radio Frequency) concepts]
 
 ### Links
 
-- Solution URL: [https://github.com/Nikhila-DN/RF_Link_Planner.git]
+- Solution URL: https://github.com/Nikhila-DN/RF_Link_Planner.git
 - Live Site URL: https://rf-link-plannner-by-nikhila-d.netlify.app/
 
 ## Summary
